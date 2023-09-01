@@ -65,7 +65,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+-- keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -151,7 +151,7 @@ vim.api.nvim_set_keymap("n", "K", ":lua require('user.keymaps').show_documentati
 
 -- vim.api.nvim_set_keymap("n", "<m-b>", "<cmd>lua require('user.bfs').open()<cr>", opts)
 -- vim.api.nvim_set_keymap("n", "<m-b>", "<cmd>JABSOpen<cr>", opts)
-vim.api.nvim_set_keymap("n", "<m-e>", "NvimTreeToggle<cr>", opts)
+-- vim.api.nvim_set_keymap("n", "<m-e>", "NvimTreeToggle<cr>", opts)
 -- vim.api.nvim_set_keymap(
 --   "n",
 --   "<m-f>",
