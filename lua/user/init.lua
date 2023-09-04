@@ -7,6 +7,7 @@ require("user.nvim-tree")
 require("user.nvim-treesitter")
 require("user.nvim-treesitter-context")
 require("user.lualine")
+require("user.bufferline")
 
 local themeStatus, catppuccin = pcall(require, "catppuccin")
 

@@ -20,7 +20,11 @@ require("nvim-tree").setup({
   },
   renderer = {
     group_empty = true,
-  },
+    indent_width = 2,
+    indent_markers = {
+      enable = true,
+    }
+  }, 
   filters = {
     dotfiles = true,
   },
