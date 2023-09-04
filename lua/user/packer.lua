@@ -107,7 +107,7 @@ return require("packer").startup(function()
   use ({
     "RRethy/vim-illuminate",
     config = function()
-      require("user.illuminate").setup()
+      require("user.illuminate")
     end,
   })
 
