@@ -104,6 +104,13 @@ return require("packer").startup(function()
     end,
   })
 
+  use ({
+    "RRethy/vim-illuminate",
+    config = function()
+      require("user.illuminate").setup()
+    end,
+  })
+
   use "numToStr/Comment.nvim"
   use "ThePrimeagen/harpoon"
 
