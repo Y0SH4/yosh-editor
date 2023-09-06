@@ -111,6 +111,13 @@ return require("packer").startup(function()
     end,
   })
 
+  use ({
+    "akinsho/toggleterm.nvim", 
+    config = function()
+      require("user.toggleterm")
+    end,
+  })
+
   use "numToStr/Comment.nvim"
   use "ThePrimeagen/harpoon"
 
