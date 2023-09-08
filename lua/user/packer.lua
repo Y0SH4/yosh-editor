@@ -118,7 +118,37 @@ return require("packer").startup(function()
     end,
   })
 
+  use ({ 
+    "mhartington/formatter.nvim",
+    config = function()
+      require("lsp.formatter")
+    end, 
+  })
+
   use "numToStr/Comment.nvim"
   use "ThePrimeagen/harpoon"
+  
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+  }
 
+  use ({
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "eslint-lsp",
+        "js-debug-adapter",
+        "prettier",
+        "typescript-language-server"
+      }
+    }
+  })
+
+  use ({
+    "mfussenegger/nvim-lint",
+    config = function()
+      require("lsp.lint")
+    end
+  })
 end)

@@ -15,14 +15,16 @@ nls.setup({
 
     -- Formatting
     fmt.prettierd,
+    fmt.forge_fmt,
     fmt.eslint_d,
     fmt.prettier.with({
-      filetypes = { "html", "json", "yaml", "markdown", "javascript", "typescript" },
+      filetypes = { "html", "json", "yaml", "markdown", "javascript", "typescript", "solidity" },
     }),
     fmt.stylua,
     fmt.rustfmt,
 
     -- Diagnostics
+    dgn.solhint,
     dgn.eslint_d,
     dgn.shellcheck,
     dgn.pylint.with({
