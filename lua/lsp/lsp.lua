@@ -3,9 +3,21 @@ if not status then
   return
 end
 
-local protocol = require("vim.lsp.protocol")
-
 local on_attach = function(client, bufnr)
+  local bufmap = function(keys, func)
+    vim.keymap.set('n', keys, func, { buffer = bufnr })
+  end
+
+  bufmap('<leader>r', vim.lsp.buf.rename)
+  bufmap('<leader>a', vim.lsp.buf.code_action)
+
+  bufmap('gd', vim.lsp.buf.defnition)
+  bufmap('gD', vim.lsp.buf.declaration)
+  bufmap('gI', vim.lsp.bif.implementation)
+  bufmap('<leader>D', vim.lsp.buf.type_definition)
+
+  bufmap('K', vim.lsp.buf.hover)
+
   -- format on save
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_create_autocmd("BufWritePre", {

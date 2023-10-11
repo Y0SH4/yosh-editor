@@ -202,3 +202,4 @@ keymap("n", "<m-q>", ":call QuickFixToggle()<cr>", opts)
 keymap("n", "<c-l>", "<cmd>lua vim.lsp.codelens.run()<cr>", opts)
 
 return M
+
